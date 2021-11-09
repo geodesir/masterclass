@@ -36,15 +36,15 @@ public class CategoryService {
     public Category save (Category c){
         if (c.getId()==null){
             return categoryRepository.save(c);
-        }else{
+        }
+        /*else{
             Optional <Category> caux = categoryRepository.getCategory(c.getId());
             if (caux.isEmpty()){
-                return categoryRepository.save(c);
-            }
+                return categoryRepository.save(c);}*/            
             else{
                 return c;
             }
     }
         
-    }
-}
+ }
+
